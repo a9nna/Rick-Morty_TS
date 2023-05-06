@@ -1,0 +1,4 @@
+{
+  "*.{ts,tsx}": "npx eslint --ignore-path gitignore . --max-warnings 0",
+  "*.{ts,tsx,css,json,md}": "prettier --write"
+}
