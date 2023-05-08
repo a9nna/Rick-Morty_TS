@@ -1,5 +1,5 @@
 import { type CharacterStructure } from "./getCharacters/types";
-import style from "../styles/character.module.css";
+import style from "../styles/createCharacterCard.module.css";
 
 const createCharacterCard = ({
   name,
