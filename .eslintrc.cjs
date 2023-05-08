@@ -8,7 +8,7 @@ module.exports = {
   overrides: [
     {
       extends: ["xo-typescript", "prettier"],
-      files: ["*.ts", "*.tsx"],
+      files: ["*.ts"],
     },
   ],
   parserOptions: {
