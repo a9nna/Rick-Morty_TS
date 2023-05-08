@@ -1,6 +1,7 @@
 import createCharacterCard from "./createCharacterCard";
 import getCharacters from "./getCharacters/getCharacters";
 import { type RickAndMortyApiDataStructure } from "./getCharacters/types";
+import style from "../styles/createCharacters.module.css";
 
 const createCharacters = async () => {
   let characters: string;
@@ -20,7 +21,7 @@ const createCharacters = async () => {
     });
   });
 
-  return characters!;
+  return `<ul class=${style.characters}>${characters!}</ul>`;
 };
 
 export default createCharacters;
