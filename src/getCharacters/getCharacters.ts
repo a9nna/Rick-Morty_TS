@@ -1,4 +1,3 @@
-import "../loadEnvironments";
 import axios from "axios";
 import { type AxiosRequestConfig } from "axios";
 import { type RickAndMortyApiDataStructure } from "./types";
