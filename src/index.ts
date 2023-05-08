@@ -1,1 +1,5 @@
-const a = 3;
+import createCharacters from "./ts/createCharacters";
+
+(async () => {
+  await createCharacters();
+})();
