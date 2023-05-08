@@ -1,11 +1,12 @@
 import createCharacterCard from "./createCharacterCard";
 import getCharacters from "./getCharacters/getCharacters";
 import { type RickAndMortyApiDataStructure } from "./getCharacters/types";
+import style from "../styles/createCharacters.module.css";
 
 const createCharacters = async () => {
   let characters: string;
   let apiResponse: RickAndMortyApiDataStructure;
-  const testaco = document.querySelector(".root")!;
+  const charactersStructure = document.querySelector(".root")!;
 
   await getCharacters().then((result) => {
     apiResponse = result!;
@@ -20,7 +21,7 @@ const createCharacters = async () => {
       return characters;
     });
 
-    testaco.innerHTML = `<ul class="characters">${characters}</ul>`;
+    charactersStructure.innerHTML = `<ul class=${style.characters}>${characters}</ul>`;
   });
 };
 
