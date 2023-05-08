@@ -6,7 +6,6 @@ import style from "../styles/createCharacters.module.css";
 const createCharacters = async () => {
   let characters: string;
   let apiResponse: RickAndMortyApiDataStructure;
-  const charactersStructure = document.querySelector(".root")!;
 
   await getCharacters().then((result) => {
     apiResponse = result!;
@@ -20,9 +19,9 @@ const createCharacters = async () => {
 
       return characters;
     });
-
-    charactersStructure.innerHTML = `<ul class=${style.characters}>${characters}</ul>`;
   });
+
+  return `<ul class=${style.characters}>${characters!}</ul>`;
 };
 
 export default createCharacters;
